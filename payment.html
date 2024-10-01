@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make a Payment</title>
+</head>
+<body>
+    <h1>Make International Payment</h1>
+    <form action="/pay" method="POST">
+        <label for="amount">Amount:</label><br>
+        <input type="number" id="amount" name="amount" required><br><br>
+
+        <label for="currency">Currency:</label><br>
+        <select id="currency" name="currency" required>
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">RSA</option>
+        </select><br><br>
+
+        <label for="provider">Payment Provider:</label><br>
+        <select id="provider" name="provider" required>
+            <option value="SWIFT">SWIFT</option>
+        </select><br><br>
+        <label for="payeeAccount">Payee Account Number:</label><br>
+        <input type="text" id="payeeAccount" name="payeeAccount" required><br><br>
+
+        <label for="swiftCode">Payee SWIFT Code:</label><br>
+        <input type="text" id="swiftCode" name="swiftCode" required><br><br>
+
+        <button type="submit">Pay Now</button>
+    </form>
+</body>
+</html>
