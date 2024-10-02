@@ -4,20 +4,142 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Customer Login</title>
+    <style>
+       
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url('src/background.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        
+        form {
+            background-color: rgba(255, 255, 255, 0.85);
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+            position: relative;
+        }
+
+       
+        .logo {
+            width: 100px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        
+        label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 8px;
+            color: #333;
+            text-align: left;
+        }
+
+       
+        .input-container {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+       
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px 40px 10px 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+       
+        .input-container img {
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            width: 20px;
+            height: auto;
+        }
+
+        
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        
+        @media (max-width: 768px) {
+            form {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 20px;
+            }
+
+            button {
+                font-size: 14px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Customer Login</h1>
     <form action="/login" method="POST">
-        <label for="username">Username:</label><br>
-        <input type="text" id="username" name="username" required><br><br>
+        <!-- Add logo image -->
+        <img src="src/bank.png" alt="Logo" class="logo">
 
-        <label for="accountnumber">Account Number:</label><br>
-        <input type="text" id="accountnumber" name="accountnumber" required><br><br>
+        <h1>Customer Login</h1>
 
-        <label for="password">Password:</label><br>
-        <input type="password" id="password" name="password" required><br><br>
+        <!-- Username input with icon -->
+        <div class="input-container">
+            <img src="src/user.png" alt="Username Icon">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+
+        <!-- Account number input -->
+        <div class="input-container">
+            <img src="src/login.png" alt="Account Icon">
+            <label for="accountnumber">Account Number</label>
+            <input type="text" id="accountnumber" name="accountnumber" required>
+        </div>
+
+        <!-- Password input with icon -->
+        <div class="input-container">
+            <img src="src/password.png" alt="Password Icon">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+        </div>
 
         <button type="submit">Login</button>
     </form>
 </body>
 </html>
+
